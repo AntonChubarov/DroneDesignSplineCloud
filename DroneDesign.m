@@ -8,11 +8,15 @@ mufr=dp(3);
 mumot=dp(4);
 muprop=dp(5);
 nCell=dp(6);
-Crate=dp(7);
+Crate=5*dp(7);
 nprop=dp(8);
 
 
 M0=payloadWeight/(1-(mubat+muel+mufr+nprop*mumot+nprop*muprop));
+if M0<=0
+    M0=100*payloadWeight;
+    return
+end
 
 Mbat=mubat*M0;
 Mel=muel*M0;
