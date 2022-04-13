@@ -17,6 +17,8 @@ if M0<=0
     return
 end
 
+disp(['Drone mass ',num2str(M0,4),' kg'])
+
 Mbat=mubat*M0;
 Mel=muel*M0;
 Mfr=mufr*M0;
